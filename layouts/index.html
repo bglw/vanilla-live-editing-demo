@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div data-cms-bind="#hero_block">
+    <hr />
+    <h2 data-custom-live-editing="innerText:hero_block.title">{{ .Params.hero_block.title }}</h2>
+    <p data-custom-live-editing="innerText:hero_block.block_one">{{ .Params.hero_block.block_one }}</p>
+    <p data-custom-live-editing="innerText:hero_block.block_two">{{ .Params.hero_block.block_two }}</p>
+    <hr />
+</div>
+<img
+    data-cms-bind="#imagery" 
+    data-custom-live-editing="src:imagery.example_image,alt:imagery.example_image_alt"
+    src="{{ .Params.imagery.example_image }}" 
+    alt="{{ .Params.imagery.example_image_alt }}">
+{{ end }}
